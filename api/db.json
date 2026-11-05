@@ -1,0 +1,101 @@
+{
+  "users": [],
+  "cultivos": [
+    {
+      "id": 1,
+      "nombre": "Chirivía",
+      "estacion": "Primavera",
+      "precio_venta": 35,
+      "dias_crecimiento": 4,
+      "se_recultiva": false
+    },
+    {
+      "id": 2,
+      "nombre": "Fresa",
+      "estacion": "Primavera",
+      "precio_venta": 120,
+      "dias_crecimiento": 8,
+      "se_recultiva": true
+    },
+    {
+      "id": 3,
+      "nombre": "Coliflor",
+      "estacion": "Primavera",
+      "precio_venta": 175,
+      "dias_crecimiento": 12,
+      "se_recultiva": false
+    },
+    {
+      "id": 4,
+      "nombre": "Papa",
+      "estacion": "Primavera",
+      "precio_venta": 80,
+      "dias_crecimiento": 6,
+      "se_recultiva": false
+    },
+    {
+      "id": 5,
+      "nombre": "Arándano",
+      "estacion": "Verano",
+      "precio_venta": 50,
+      "dias_crecimiento": 13,
+      "se_recultiva": true
+    },
+    {
+      "id": 6,
+      "nombre": "Melón",
+      "estacion": "Verano",
+      "precio_venta": 250,
+      "dias_crecimiento": 12,
+      "se_recultiva": false
+    },
+    {
+      "id": 7,
+      "nombre": "Tomate",
+      "estacion": "Verano",
+      "precio_venta": 60,
+      "dias_crecimiento": 11,
+      "se_recultiva": true
+    },
+    {
+      "id": 8,
+      "nombre": "Fruta estrella",
+      "estacion": "Verano",
+      "precio_venta": 750,
+      "dias_crecimiento": 13,
+      "se_recultiva": false
+    },
+    {
+      "id": 9,
+      "nombre": "Calabaza",
+      "estacion": "Otoño",
+      "precio_venta": 320,
+      "dias_crecimiento": 13,
+      "se_recultiva": false
+    },
+    {
+      "id": 10,
+      "nombre": "Arándano rojo",
+      "estacion": "Otoño",
+      "precio_venta": 75,
+      "dias_crecimiento": 7,
+      "se_recultiva": true
+    },
+    {
+      "id": 11,
+      "nombre": "Berenjena",
+      "estacion": "Otoño",
+      "precio_venta": 60,
+      "dias_crecimiento": 5,
+      "se_recultiva": true
+    },
+    {
+      "id": 12,
+      "nombre": "Sandía polar",
+      "estacion": "Invierno",
+      "precio_venta": 60,
+      "dias_crecimiento": 7,
+      "se_recultiva": false
+    }
+  ]
+}
