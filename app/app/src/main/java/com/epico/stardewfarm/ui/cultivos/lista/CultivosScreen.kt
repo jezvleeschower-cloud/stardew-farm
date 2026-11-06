@@ -35,6 +35,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
@@ -43,8 +44,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.epico.stardewfarm.domain.model.Cultivo
+import com.epico.stardewfarm.model.Cultivo
 import com.epico.stardewfarm.ui.AppViewModelProvider
+import kotlinx.coroutines.launch
 
 @Composable
 fun CultivosRoute(
@@ -58,6 +60,7 @@ fun CultivosRoute(
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
+    val scope = rememberCoroutineScope()
 
     // Recarga al entrar y al volver de detalle o formulario.
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) { viewModel.cargar() }
@@ -73,10 +76,12 @@ fun CultivosRoute(
         }
     }
 
+    // El Snackbar se lanza desde un scope propio: si se lanzara dentro del
+    // LaunchedEffect, al consumir el mensaje la clave cambiaría y se cancelaría.
     LaunchedEffect(mensajeEntrante) {
-        mensajeEntrante?.let {
+        mensajeEntrante?.let { texto ->
             onMensajeEntranteConsumido()
-            snackbarHostState.showSnackbar(it)
+            scope.launch { snackbarHostState.showSnackbar(texto) }
         }
     }
 
@@ -200,9 +205,11 @@ private fun CultivoItem(
     onEditar: () -> Unit,
     onEliminar: () -> Unit,
 ) {
-    Card(modifier = Modifier
-        .fillMaxWidth()
-        .clickable(onClick = onClick)) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
+    ) {
         Row(
             modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 8.dp, end = 4.dp),
             verticalAlignment = Alignment.CenterVertically,

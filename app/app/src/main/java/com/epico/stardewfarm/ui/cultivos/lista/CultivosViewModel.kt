@@ -2,11 +2,11 @@ package com.epico.stardewfarm.ui.cultivos.lista
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.epico.stardewfarm.domain.model.AppResult
-import com.epico.stardewfarm.domain.model.Cultivo
-import com.epico.stardewfarm.domain.model.DataError
-import com.epico.stardewfarm.domain.repository.AuthRepository
-import com.epico.stardewfarm.domain.repository.CultivoRepository
+import com.epico.stardewfarm.model.AppResult
+import com.epico.stardewfarm.model.Cultivo
+import com.epico.stardewfarm.model.DataError
+import com.epico.stardewfarm.repository.AuthRepository
+import com.epico.stardewfarm.repository.CultivoRepository
 import com.epico.stardewfarm.ui.common.toMessage
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

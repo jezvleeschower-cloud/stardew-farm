@@ -2,8 +2,8 @@ package com.epico.stardewfarm.ui.auth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.epico.stardewfarm.domain.model.AppResult
-import com.epico.stardewfarm.domain.repository.AuthRepository
+import com.epico.stardewfarm.model.AppResult
+import com.epico.stardewfarm.repository.AuthRepository
 import com.epico.stardewfarm.ui.common.Validators
 import com.epico.stardewfarm.ui.common.toMessage
 import kotlinx.coroutines.flow.MutableStateFlow

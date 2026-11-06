@@ -28,7 +28,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.epico.stardewfarm.domain.model.Cultivo
+import com.epico.stardewfarm.model.Cultivo
 import com.epico.stardewfarm.ui.AppViewModelProvider
 
 @Composable

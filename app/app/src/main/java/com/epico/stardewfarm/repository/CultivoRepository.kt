@@ -1,7 +1,7 @@
-package com.epico.stardewfarm.domain.repository
+package com.epico.stardewfarm.repository
 
-import com.epico.stardewfarm.domain.model.AppResult
-import com.epico.stardewfarm.domain.model.Cultivo
+import com.epico.stardewfarm.model.AppResult
+import com.epico.stardewfarm.model.Cultivo
 
 interface CultivoRepository {
     suspend fun listar(): AppResult<List<Cultivo>>

@@ -1,7 +1,7 @@
 package com.epico.stardewfarm.data.remote
 
-import com.epico.stardewfarm.domain.model.AppResult
-import com.epico.stardewfarm.domain.model.DataError
+import com.epico.stardewfarm.model.AppResult
+import com.epico.stardewfarm.model.DataError
 import kotlinx.serialization.SerializationException
 import retrofit2.HttpException
 import java.io.IOException

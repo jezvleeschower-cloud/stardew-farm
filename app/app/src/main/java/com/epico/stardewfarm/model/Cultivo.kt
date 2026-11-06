@@ -1,4 +1,4 @@
-package com.epico.stardewfarm.domain.model
+package com.epico.stardewfarm.model
 
 data class Cultivo(
     val id: Int = 0,

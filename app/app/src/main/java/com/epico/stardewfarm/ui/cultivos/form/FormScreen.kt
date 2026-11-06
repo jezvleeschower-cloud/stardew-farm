@@ -42,7 +42,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.epico.stardewfarm.domain.model.Estacion
+import com.epico.stardewfarm.model.Estacion
 import com.epico.stardewfarm.ui.AppViewModelProvider
 
 @Composable

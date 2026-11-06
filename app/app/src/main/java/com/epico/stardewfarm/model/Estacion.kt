@@ -1,4 +1,4 @@
-package com.epico.stardewfarm.domain.model
+package com.epico.stardewfarm.model
 
 enum class Estacion(val etiqueta: String) {
     PRIMAVERA("Primavera"),

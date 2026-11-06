@@ -1,6 +1,6 @@
 package com.epico.stardewfarm.ui.common
 
-import com.epico.stardewfarm.domain.model.DataError
+import com.epico.stardewfarm.model.DataError
 
 fun DataError.toMessage(http400: String = "Los datos enviados no son válidos"): String =
     when (this) {

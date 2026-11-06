@@ -2,8 +2,8 @@ package com.epico.stardewfarm.data.mapper
 
 import com.epico.stardewfarm.data.remote.dto.CultivoDto
 import com.epico.stardewfarm.data.remote.dto.CultivoRequest
-import com.epico.stardewfarm.domain.model.Cultivo
-import com.epico.stardewfarm.domain.model.Estacion
+import com.epico.stardewfarm.model.Cultivo
+import com.epico.stardewfarm.model.Estacion
 
 fun CultivoDto.toDomain(): Cultivo = Cultivo(
     id = id,

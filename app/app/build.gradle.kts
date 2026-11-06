@@ -19,12 +19,14 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:3000/\"")
+            // API desplegada en AWS (HTTPS). La URL debe terminar en "/".
+            buildConfigField("String", "BASE_URL", "\"https://44.197.36.168.nip.io/\"")
+            // Para volver a la API local, usa esta línea en su lugar:
+            // buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:3000/\"")
         }
         release {
             isMinifyEnabled = false
-            // Cuando despliegues en AWS, cambia esta URL (con HTTPS)
-            buildConfigField("String", "BASE_URL", "\"https://TU-API.ejemplo.com/\"")
+            buildConfigField("String", "BASE_URL", "\"https://44.197.36.168.nip.io/\"")
         }
     }
 
@@ -48,6 +50,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     implementation(libs.androidx.activity.compose)
 
     implementation(platform(libs.androidx.compose.bom))

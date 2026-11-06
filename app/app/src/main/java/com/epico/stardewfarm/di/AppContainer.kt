@@ -9,8 +9,8 @@ import com.epico.stardewfarm.data.remote.AuthInterceptor
 import com.epico.stardewfarm.data.remote.CultivoApi
 import com.epico.stardewfarm.data.repository.AuthRepositoryImpl
 import com.epico.stardewfarm.data.repository.CultivoRepositoryImpl
-import com.epico.stardewfarm.domain.repository.AuthRepository
-import com.epico.stardewfarm.domain.repository.CultivoRepository
+import com.epico.stardewfarm.repository.AuthRepository
+import com.epico.stardewfarm.repository.CultivoRepository
 import retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -53,4 +53,5 @@ class AppContainer(context: Context) {
 
     val authRepository: AuthRepository = AuthRepositoryImpl(authApi, session)
     val cultivoRepository: CultivoRepository = CultivoRepositoryImpl(cultivoApi)
+
 }

@@ -1,4 +1,4 @@
-package com.epico.stardewfarm.domain.model
+package com.epico.stardewfarm.model
 
 sealed interface DataError {
     data object NoInternet : DataError

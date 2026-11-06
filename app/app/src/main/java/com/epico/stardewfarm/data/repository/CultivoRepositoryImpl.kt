@@ -4,9 +4,9 @@ import com.epico.stardewfarm.data.mapper.toDomain
 import com.epico.stardewfarm.data.mapper.toRequest
 import com.epico.stardewfarm.data.remote.CultivoApi
 import com.epico.stardewfarm.data.remote.safeApiCall
-import com.epico.stardewfarm.domain.model.AppResult
-import com.epico.stardewfarm.domain.model.Cultivo
-import com.epico.stardewfarm.domain.repository.CultivoRepository
+import com.epico.stardewfarm.model.AppResult
+import com.epico.stardewfarm.model.Cultivo
+import com.epico.stardewfarm.repository.CultivoRepository
 
 class CultivoRepositoryImpl(
     private val api: CultivoApi,

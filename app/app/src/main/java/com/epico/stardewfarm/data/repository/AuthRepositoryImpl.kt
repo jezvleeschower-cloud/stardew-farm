@@ -7,9 +7,9 @@ import com.epico.stardewfarm.data.remote.dto.AuthResponseDto
 import com.epico.stardewfarm.data.remote.dto.LoginRequest
 import com.epico.stardewfarm.data.remote.dto.RegisterRequest
 import com.epico.stardewfarm.data.remote.safeApiCall
-import com.epico.stardewfarm.domain.model.AppResult
-import com.epico.stardewfarm.domain.model.Usuario
-import com.epico.stardewfarm.domain.repository.AuthRepository
+import com.epico.stardewfarm.model.AppResult
+import com.epico.stardewfarm.model.Usuario
+import com.epico.stardewfarm.repository.AuthRepository
 
 class AuthRepositoryImpl(
     private val api: AuthApi,
