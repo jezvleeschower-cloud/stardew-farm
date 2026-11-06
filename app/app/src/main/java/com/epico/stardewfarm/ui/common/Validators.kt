@@ -24,4 +24,17 @@ object Validators {
         contrasena != confirmacion -> "Las contraseñas no coinciden"
         else -> null
     }
+
+    fun nombreCultivo(valor: String): String? =
+        if (valor.isBlank()) "El nombre es obligatorio" else null
+
+    fun precioVenta(valor: String): String? {
+        val n = valor.toIntOrNull() ?: return "Ingresa un precio válido"
+        return if (n <= 0) "El precio debe ser mayor a 0" else null
+    }
+
+    fun diasCrecimiento(valor: String): String? {
+        val n = valor.toIntOrNull() ?: return "Ingresa los días de crecimiento"
+        return if (n !in 1..28) "Debe estar entre 1 y 28 días" else null
+    }
 }
